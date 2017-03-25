@@ -64,12 +64,12 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #f06;
-}
-
 a:visited {
   color: inherit;
+}
+
+a:hover {
+  color: #f06;
 }
 
 .listOfCatagories {
@@ -80,7 +80,6 @@ a:visited {
   justify-content: space-around;
   flex-wrap: wrap;
   font-size: 30px;
-  font-family: 'Playfair Display', serif;
 }
 
 .catagories {
@@ -89,6 +88,43 @@ a:visited {
 
 .catagories:hover {
   color: #f06;
+}
+
+.project {
+  margin-left: 20px;
+  margin-top: 30px;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.project h1 {
+  font-family: 'Playfair Display', serif;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.project p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.projectImages {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.projectImage {
+  width: 275px;
+  height: 505px;
+  margin: 10px;
+}
+
+.arrows {
+  align-self: center;
+  font-size: 50px;
+  color: #d3d3d3;
 }
 
 @keyframes App-logo-spin {

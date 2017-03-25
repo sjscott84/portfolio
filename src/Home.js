@@ -8,7 +8,7 @@ class Home extends Component {
     return (
       <div className="App">
         <Header />
-        <img src={require("./me.jpg")} alt="Sarah" className="photo" />
+        <img src={require("./images/me.jpg")} alt="Sarah" className="photo" />
         <h1 className="intro-header">Hello,</h1>
         <p className="intro">
           I'm Sarah and I like exploring code, from front-end to neural networks.  Why don't you take a look at what I have been up to?

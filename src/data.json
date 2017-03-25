@@ -1,0 +1,14 @@
+{  
+   "projects":{  
+      "Apteligent":{  
+         "name":"Apteligent App",
+         "github":"https://github.com/sjscott84/apteligent-mobile-app",
+         "description":"This is an app that I worked hard on even though it came to noting in the end, due to business."
+      },
+       "Trip":{  
+         "name":"Tripommendation App",
+         "github":"https://github.com/sjscott84/Map-Notes-App",
+         "description":"This is an app that saves trip recommendations."
+      }
+   }
+}
