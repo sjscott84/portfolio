@@ -9,6 +9,16 @@
          "name":"Tripommendation App",
          "github":"https://github.com/sjscott84/Map-Notes-App",
          "description":"This is an app that saves trip recommendations."
+      },
+      "Sorting":{
+        "name": "Sorting Algorithms",
+        "github": "https://github.com/sjscott84/Sorting-Algorithms",
+        "description": "This is a simple program, written in Java, that I built to learn some of the fundamental sorting algorithms and to practise writing code in java."
+      },
+      "Weather":{
+        "name": "Weather App",
+        "github": "https://github.com/sjscott84/WeatherDemo",
+        "description": "This very simple app was built for a Brown Bag showcasing React Native.  It was built to show how easy and how fast puttting together a native application is using React Native, and how smooth the reload and debugging tools are."
       }
    }
 }

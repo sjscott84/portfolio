@@ -11,13 +11,8 @@ class Home extends Component {
         <img src={require("./images/me.jpg")} alt="Sarah" className="photo" />
         <h1 className="intro-header">Hello,</h1>
         <p className="intro">
-          I'm Sarah and I like exploring code, from front-end to neural networks.  Why don't you take a look at what I have been up to?
+          I'm Sarah and I am a self taught developer who loves exploring and experimenting with code.  Why don't you take a look at what I have been up to?
         </p>
-        <div className="listOfCatagories">
-          <h1 className="catagories"><Link to="/projects">Projects</Link></h1>
-          <h1 className="catagories"><Link to="/study">Study</Link></h1>
-          <h1 className="catagories"><Link to="/reading">Reading</Link></h1>
-        </div>
       </div>
     );
   }
