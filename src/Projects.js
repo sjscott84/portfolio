@@ -20,13 +20,22 @@ class Projects extends Component {
 
 class Project extends Component {
 
+  displayStaticImages(){
+    var key = 0;
+    var images = [];
+    this.props.images.map(function(image){ 
+      images.push(<img className="projectImageMain" src={require(image)} alt={"Project"} key={key} />)
+      key++;
+    })
+    return images;
+  }
+
   showImages(){
     if(this.props.images && this.props.images.length > 2){
       return  <ImageCarousel images={this.props.images} />
     }else if(this.props.images && this.props.images.length <= 2){
       return <div className="projectImagesPlain">
-              <img className="projectImageMain" src={require(this.props.images[0])} alt={"Project"} />
-              <img className="projectImageMain" src={require(this.props.images[1])} alt={"Project"} />
+              {this.displayStaticImages()}
             </div>
     }
   }

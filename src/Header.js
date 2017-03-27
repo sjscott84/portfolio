@@ -4,7 +4,7 @@ import './App.css';
 
 class Header extends Component {
   displayHome(){
-    if(location.pathname != "/"){
+    if(location.pathname !== "/"){
       return <p className="header-text"><Link to="/">Home</Link></p>
     }else{
       return <p className="header-text"><Link to="/projects">Projects</Link></p>
