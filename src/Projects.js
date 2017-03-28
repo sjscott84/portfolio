@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header.js';
 import projectData from './data.json';
+import MediaQuery from 'react-responsive';
 import './App.css';
 
 class Projects extends Component {
@@ -62,6 +63,8 @@ class ImageCarousel extends Component {
     };
     this.clickLeft = this.clickLeft.bind(this);
     this.clickRight = this.clickRight.bind(this);
+    this.clickLeftSingle = this.clickLeft.bind(this);
+    this.clickRightSingle = this.clickRight.bind(this);
   };
 
   checkStateLeft(state){
@@ -80,7 +83,39 @@ class ImageCarousel extends Component {
     }
   }
 
+  checkStateLeftSingle(state){
+    if(state === 0){
+      return this.props.images.length-1
+    }else{
+      return --state;
+    }
+  };
+
+  checkStateRightSingle(state){
+    if(state === this.props.images.length-1){
+      return 0
+    }else{
+      return ++state;
+    }
+  };
+
   clickLeft(){
+    this.setState({
+      leftImage: this.checkStateLeftSingle(this.state.leftImage),
+      middleImage: this.checkStateLeftSingle(this.state.middleImage),
+      rightImage: this.checkStateLeftSingle(this.state.rightImage)
+    })
+  };
+
+  clickRight(){
+    this.setState({
+      leftImage: this.checkStateRightSingle(this.state.leftImage),
+      middleImage: this.checkStateRightSingle(this.state.middleImage),
+      rightImage: this.checkStateRightSingle(this.state.rightImage)
+    })
+  };
+
+  clickLeftSingle(){
     this.setState({
       leftImage: this.checkStateLeft(this.state.leftImage),
       middleImage: this.checkStateLeft(this.state.middleImage),
@@ -88,7 +123,7 @@ class ImageCarousel extends Component {
     })
   };
 
-  clickRight(){
+  clickRightSingle(){
     this.setState({
       leftImage: this.checkStateRight(this.state.leftImage),
       middleImage: this.checkStateRight(this.state.middleImage),
@@ -96,15 +131,56 @@ class ImageCarousel extends Component {
     })
   };
 
+
+  clickRightSingle(){
+    if(this.state.middleImage === this.props.images.length-1){
+      this.setState({
+        middleImage: 0
+      })
+    }else{
+      this.setState({
+        middleImage: ++this.state.middleImage
+      })
+    }
+  };
+
   render(){
     return(
-      <div className="projectImages">
-        <i className="fa fa-chevron-left arrows" aria-hidden="true" onClick={this.clickLeft}></i>
-          <img className="projectImageSide" src={require(this.props.images[this.state.leftImage])} alt={"Project"} />
-          <img className="projectImageMain" src={require(this.props.images[this.state.middleImage])} alt={"Project"} />
-          <img className="projectImageSide" src={require(this.props.images[this.state.rightImage])} alt={"Project"} />
-        <i className="fa fa-chevron-right arrows" aria-hidden="true" onClick={this.clickRight}></i>
-      </div>)
+      <div>
+        <MediaQuery minWidth={870}>
+          <div className="projectImages">
+            <i className="fa fa-chevron-left arrows" aria-hidden="true" onClick={this.clickLeft}></i>
+              <img className="projectImageSide" src={require(this.props.images[this.state.leftImage])} alt={"Project"} />
+              <img className="projectImageMain" src={require(this.props.images[this.state.middleImage])} alt={"Project"} />
+              <img className="projectImageSide" src={require(this.props.images[this.state.rightImage])} alt={"Project"} />
+            <i className="fa fa-chevron-right arrows" aria-hidden="true" onClick={this.clickRight}></i>
+          </div>
+        </MediaQuery>
+        <MediaQuery maxWidth={870} minWidth={670}>
+          <div className="projectImages">
+            <i className="fa fa-chevron-left arrows" aria-hidden="true" onClick={this.clickLeft}></i>
+              <img className="projectImageSideMedium" src={require(this.props.images[this.state.leftImage])} alt={"Project"} />
+              <img className="projectImageMainMedium" src={require(this.props.images[this.state.middleImage])} alt={"Project"} />
+              <img className="projectImageSideMedium" src={require(this.props.images[this.state.rightImage])} alt={"Project"} />
+            <i className="fa fa-chevron-right arrows" aria-hidden="true" onClick={this.clickRight}></i>
+          </div>
+        </MediaQuery>
+        <MediaQuery maxWidth={670} minWidth={500}>
+          <div className="projectImages">
+            <i className="fa fa-chevron-left arrows" aria-hidden="true" onClick={this.clickLeftSingle}></i>
+            <img className="projectImageMain" src={require(this.props.images[this.state.middleImage])} alt={"Project"} />
+            <i className="fa fa-chevron-right arrows" aria-hidden="true" onClick={this.clickRightSingle}></i>
+          </div>
+        </MediaQuery>
+        <MediaQuery maxWidth={500}>
+          <div className="projectImages">
+            <i className="fa fa-chevron-left arrowsSmall" aria-hidden="true" onClick={this.clickLeftSingle}></i>
+            <img className="projectImageMainSmall" src={require(this.props.images[this.state.middleImage])} alt={"Project"} />
+            <i className="fa fa-chevron-right arrowsSmall" aria-hidden="true" onClick={this.clickRightSingle}></i>
+          </div>
+        </MediaQuery>
+      </div>
+    )
   }
 }
 
