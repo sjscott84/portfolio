@@ -1,5 +1,5 @@
 .App {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -42,7 +42,7 @@
 }
 
 .line {
-  stroke: black;
+  stroke: #999;
 }
 
 .photo {
@@ -55,8 +55,8 @@
 .intro-header {
   margin-top: 30px;
   margin-bottom: 10px;
-  font-size: 80px;
-  font-family: 'Playfair Display', serif;
+  font-size: 120px;
+  font-family: 'Amatic SC', cursive;
 }
 
 .intro {
@@ -81,24 +81,19 @@ a:hover {
 
 .projectIntro {
   margin: 20px;
-  margin-top: 50px;
   margin-bottom: 0;
 }
 
 .project {
   margin: 20px;
-  width: 95%;
-  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .project h1 {
-  font-family: 'Playfair Display', serif;
-  margin-top: 10px;
-  margin-bottom: 5px;
-}
-
-.project h2 {
-  font-family: 'Playfair Display', serif;
+  font-size: 45px;
+  font-family: 'Amatic SC', cursive;
   margin-top: 10px;
   margin-bottom: 5px;
 }
@@ -109,18 +104,17 @@ a:hover {
 }
 
 .projectImages {
-  width: 95%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .projectImagesPlain {
-    width: 95%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
 .arrows {
   align-self: center;
