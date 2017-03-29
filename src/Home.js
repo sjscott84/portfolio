@@ -6,7 +6,7 @@ class Home extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+      <Header />
         <img src={require("./images/me.jpg")} alt="Sarah" className="photo" />
         <h1 className="intro-header">Hello,</h1>
         <p className="intro">

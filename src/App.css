@@ -4,36 +4,49 @@
   align-items: center;
   flex-direction: column;
   position: absolute;
-  width: 100% !important;
-  height: 100% !important;
-  /*background-color: #e8e8e8;*/
+  background: #F5F5F5;
+  margin: 20px;
 }
 
 .header {
-  background-color: black;
-  color: white;
-  position: fixed;
-  top: 0;
-  height: 30px;
   width: 100%;
+  flex-direction: column;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+
+}
+
+.headerLinks {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-text {
-  color: white;
-  font-size: 15px;
-  margin-left: 10px;
-  margin-right: 10px;
+  font-size: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .header-text:hover {
   color: #f06;
 }
 
+.svgLine {
+  width: 90%;
+  height: 5px;
+  align-self: center;
+
+}
+
+.line {
+  stroke: black;
+}
+
 .photo {
-  margin-top: 80px;
+  margin-top: 40px;
   border-radius: 50%;
   height: 200px;
   width: 200px;
