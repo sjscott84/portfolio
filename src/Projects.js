@@ -10,10 +10,11 @@ class Projects extends Component {
     return (
       <div className="App">
         <Header />
-        <Project title={data.Apteligent.name} url={data.Apteligent.github} description={data.Apteligent.description} images={["./images/Apteligent/image-1.png", "./images/Apteligent/image-2.png", "./images/Apteligent/image-3.png", "./images/Apteligent/image-4.png", "./images/Apteligent/image-5.png", "./images/Apteligent/image-6.png", "./images/Apteligent/image-7.png"]} />
-        <Project title={data.Trip.name} url={data.Trip.github} description={data.Trip.description} images={["./images/Trip/image-1.jpg", "./images/Trip/image-2.jpg", "./images/Trip/image-3.jpg", "./images/Trip/image-4.jpg", "./images/Trip/image-5.jpg", "./images/Trip/image-6.jpg", "./images/Trip/image-7.jpg", "./images/Trip/image-8.jpg", "./images/Trip/image-9.jpg", "./images/Trip/image-10.jpg"]} />
+        <h4 className="projectIntro">The following are just a few of the projects I have worked on, and do not include projects built as part of any course.  To see a full list of all the projects I have worked on please visit my github repository <a href={'https://github.com/sjscott84'}  target="_blank">here.</a></h4>
+        <Project title={data.Apteligent.name} url={data.Apteligent.github} description={data.Apteligent.description} images={["/Apteligent/image-1.png", "/Apteligent/image-2.png", "/Apteligent/image-3.png", "/Apteligent/image-4.png", "/Apteligent/image-5.png", "/Apteligent/image-6.png", "/Apteligent/image-7.png"]} />
+        <Project title={data.Trip.name} url={data.Trip.github} description={data.Trip.description} images={["/Trip/image-1.jpg", "/Trip/image-2.jpg", "/Trip/image-3.jpg", "/Trip/image-4.jpg", "/Trip/image-5.jpg", "/Trip/image-6.jpg", "/Trip/image-7.jpg", "/Trip/image-8.jpg", "/Trip/image-9.jpg", "/Trip/image-10.jpg"]} />
+        <Project title={data.Weather.name} url={data.Weather.github} description={data.Weather.description} images={["/Weather/image-1.png", "/Weather/image-2.png"]} />
         <Project title={data.Sorting.name} url={data.Sorting.github} description={data.Sorting.description} />
-        <Project title={data.Weather.name} url={data.Weather.github} description={data.Weather.description} images={["./images/Weather/image-1.png", "./images/Weather/image-2.png"]} />
       </div>
     );
   }
@@ -21,23 +22,11 @@ class Projects extends Component {
 
 class Project extends Component {
 
-  displayStaticImages(){
-    var key = 0;
-    var images = [];
-    this.props.images.map(function(image){ 
-      images.push(<img className="projectImageMain" src={require(image)} alt={"Project"} key={key} />)
-      key++;
-    })
-    return images;
-  }
-
   showImages(){
     if(this.props.images && this.props.images.length > 2){
       return  <ImageCarousel images={this.props.images} />
     }else if(this.props.images && this.props.images.length <= 2){
-      return <div className="projectImagesPlain">
-              {this.displayStaticImages()}
-            </div>
+      return <PlainImage images={this.props.images} />
     }
   }
 
@@ -53,9 +42,77 @@ class Project extends Component {
   }
 }
 
+class PlainImage extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      image: 0
+    };
+    this.checkStateLeftSingle = this.checkStateLeftSingle.bind(this);
+    this.checkStateRightSingle = this.checkStateRightSingle.bind(this);
+    this.displayStaticImages = this.displayStaticImages.bind(this);
+  };
+
+  displayStaticImages(){
+    var key = 0;
+    var images = [];
+    this.props.images.forEach(function(image){ 
+      images.push(<img className="projectImageMain" src={require('./images'+image)} alt={"Project"} key={key} />)
+      key++;
+    })
+    return images;
+  }
+
+  checkStateLeftSingle(){
+    var currentState = this.state.image;
+    if(this.state.image === 0){
+      this.setState({image: this.props.images.length-1})
+    }else{
+      this.setState({image: --currentState})
+    }
+  };
+
+  checkStateRightSingle(){
+    var currentState = this.state.image;
+    if(this.state.image === this.props.images.length-1){
+      this.setState({image: 0})
+    }else{
+      this.setState({image: ++currentState})
+    }
+  };
+
+  render(){
+    return(
+      <div>
+        <MediaQuery minWidth={670}>
+          <div className="projectImagesPlain">
+            {this.displayStaticImages()}
+          </div>
+        </MediaQuery>
+        <MediaQuery maxWidth={670} minWidth={500}>
+          <div className="projectImages">
+            <i className="fa fa-chevron-left arrows" aria-hidden="true" onClick={this.checkStateLeftSingle}></i>
+            <img className="projectImageMain" src={require('./images'+this.props.images[this.state.image])} alt={"Project"} />
+            <i className="fa fa-chevron-right arrows" aria-hidden="true" onClick={this.checkStateRightSingle}></i>
+          </div>
+        </MediaQuery>
+        <MediaQuery maxWidth={500}>
+          <div className="projectImages">
+            <i className="fa fa-chevron-left arrowsSmall" aria-hidden="true" onClick={this.checkStateLeftSingle}></i>
+            <img className="projectImageMainSmall" src={require('./images'+this.props.images[this.state.image])} alt={"Project"} />
+            <i className="fa fa-chevron-right arrowsSmall" aria-hidden="true" onClick={this.checkStateRightSingle}></i>
+          </div>
+        </MediaQuery>
+
+      </div>
+
+    )
+  }
+}
+
 class ImageCarousel extends Component {
   constructor(props){
-    super(props)
+    super(props);
     this.state = {
       leftImage: this.props.images.length-1,
       middleImage: 0,
@@ -131,51 +188,38 @@ class ImageCarousel extends Component {
     })
   };
 
-
-  clickRightSingle(){
-    if(this.state.middleImage === this.props.images.length-1){
-      this.setState({
-        middleImage: 0
-      })
-    }else{
-      this.setState({
-        middleImage: ++this.state.middleImage
-      })
-    }
-  };
-
   render(){
     return(
       <div>
         <MediaQuery minWidth={870}>
           <div className="projectImages">
             <i className="fa fa-chevron-left arrows" aria-hidden="true" onClick={this.clickLeft}></i>
-              <img className="projectImageSide" src={require(this.props.images[this.state.leftImage])} alt={"Project"} />
-              <img className="projectImageMain" src={require(this.props.images[this.state.middleImage])} alt={"Project"} />
-              <img className="projectImageSide" src={require(this.props.images[this.state.rightImage])} alt={"Project"} />
+              <img className="projectImageSide" src={require('./images'+this.props.images[this.state.leftImage])} alt={"Project"} />
+              <img className="projectImageMain" src={require('./images'+this.props.images[this.state.middleImage])} alt={"Project"} />
+              <img className="projectImageSide" src={require('./images'+this.props.images[this.state.rightImage])} alt={"Project"} />
             <i className="fa fa-chevron-right arrows" aria-hidden="true" onClick={this.clickRight}></i>
           </div>
         </MediaQuery>
-        <MediaQuery maxWidth={870} minWidth={670}>
+        <MediaQuery maxWidth={870} minWidth={700}>
           <div className="projectImages">
             <i className="fa fa-chevron-left arrows" aria-hidden="true" onClick={this.clickLeft}></i>
-              <img className="projectImageSideMedium" src={require(this.props.images[this.state.leftImage])} alt={"Project"} />
-              <img className="projectImageMainMedium" src={require(this.props.images[this.state.middleImage])} alt={"Project"} />
-              <img className="projectImageSideMedium" src={require(this.props.images[this.state.rightImage])} alt={"Project"} />
+              <img className="projectImageSideMedium" src={require('./images'+this.props.images[this.state.leftImage])} alt={"Project"} />
+              <img className="projectImageMainMedium" src={require('./images'+this.props.images[this.state.middleImage])} alt={"Project"} />
+              <img className="projectImageSideMedium" src={require('./images'+this.props.images[this.state.rightImage])} alt={"Project"} />
             <i className="fa fa-chevron-right arrows" aria-hidden="true" onClick={this.clickRight}></i>
           </div>
         </MediaQuery>
-        <MediaQuery maxWidth={670} minWidth={500}>
+        <MediaQuery maxWidth={700} minWidth={500}>
           <div className="projectImages">
             <i className="fa fa-chevron-left arrows" aria-hidden="true" onClick={this.clickLeftSingle}></i>
-            <img className="projectImageMain" src={require(this.props.images[this.state.middleImage])} alt={"Project"} />
+            <img className="projectImageMain" src={require('./images'+this.props.images[this.state.middleImage])} alt={"Project"} />
             <i className="fa fa-chevron-right arrows" aria-hidden="true" onClick={this.clickRightSingle}></i>
           </div>
         </MediaQuery>
         <MediaQuery maxWidth={500}>
           <div className="projectImages">
             <i className="fa fa-chevron-left arrowsSmall" aria-hidden="true" onClick={this.clickLeftSingle}></i>
-            <img className="projectImageMainSmall" src={require(this.props.images[this.state.middleImage])} alt={"Project"} />
+            <img className="projectImageMainSmall" src={require('./images'+this.props.images[this.state.middleImage])} alt={"Project"} />
             <i className="fa fa-chevron-right arrowsSmall" aria-hidden="true" onClick={this.clickRightSingle}></i>
           </div>
         </MediaQuery>
