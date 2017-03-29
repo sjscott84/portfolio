@@ -3,7 +3,7 @@
       "Apteligent":{  
          "name":"Apteligent App",
          "github":"https://github.com/sjscott84/apteligent-mobile-app",
-         "description":"This is an app that I worked hard on even though it came to noting in the end, due to business."
+         "description":"This was an open source app built using the Apteligent API.  It was built using React Native"
       },
        "Trip":{  
          "name":"Tripommendation App",
@@ -20,5 +20,6 @@
         "github": "https://github.com/sjscott84/WeatherDemo",
         "description": "This very simple app was built for a Brown Bag showcasing React Native.  It was built to show how easy and how fast puttting together a native application is using React Native, and how smooth the reload and debugging tools are."
       }
-   }
+   },
+   "about": "This is a blurb about me, blah blah blah, what would you like to know?  Hmmmmmmmmmmmmmmm? Pervert.  I don't know what to write here!"
 }

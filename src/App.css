@@ -6,6 +6,7 @@
   position: absolute;
   background: #F5F5F5;
   margin: 20px;
+
 }
 
 .header {
@@ -14,7 +15,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .headerLinks {
@@ -46,14 +46,14 @@
 }
 
 .photo {
-  margin-top: 40px;
+  margin-top: 30px;
   border-radius: 50%;
   height: 200px;
   width: 200px;
 }
 
 .intro-header {
-  margin-top: 30px;
+  margin-top: 10px;
   margin-bottom: 10px;
   font-size: 120px;
   font-family: 'Amatic SC', cursive;
@@ -84,11 +84,14 @@ a:hover {
   margin-bottom: 0;
 }
 
-.project {
-  margin: 20px;
+.allProjects {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.project {
+  margin: 20px;
 }
 
 .project h1 {
@@ -99,17 +102,19 @@ a:hover {
 }
 
 .project p {
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 5px;
 }
 
 .projectImages {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .projectImagesPlain {
+  margin-top: 20px;
   width: 95%;
   display: flex;
   justify-content: center;
@@ -160,4 +165,12 @@ a:hover {
   align-self: center;
   font-size: 30px;
   color: #d3d3d3;
+}
+
+.fullPage {
+  height: 100%;
+}
+
+.aboutMeText {
+  margin: 20px;
 }

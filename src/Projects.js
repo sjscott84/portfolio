@@ -11,10 +11,12 @@ class Projects extends Component {
       <div className="App">
         <Header />
         <h4 className="projectIntro">The following are just a few of the projects I have worked on, and do not include projects built as part of any course.  To see a full list of all the projects I have worked on please visit my github repository <a href={'https://github.com/sjscott84'}  target="_blank">here.</a></h4>
+        <div className="allProjects">
         <Project title={data.Apteligent.name} url={data.Apteligent.github} description={data.Apteligent.description} images={["/Apteligent/image-1.png", "/Apteligent/image-2.png", "/Apteligent/image-3.png", "/Apteligent/image-4.png", "/Apteligent/image-5.png", "/Apteligent/image-6.png", "/Apteligent/image-7.png"]} />
         <Project title={data.Trip.name} url={data.Trip.github} description={data.Trip.description} images={["/Trip/image-1.jpg", "/Trip/image-2.jpg", "/Trip/image-3.jpg", "/Trip/image-4.jpg", "/Trip/image-5.jpg", "/Trip/image-6.jpg", "/Trip/image-7.jpg", "/Trip/image-8.jpg", "/Trip/image-9.jpg", "/Trip/image-10.jpg"]} />
         <Project title={data.Weather.name} url={data.Weather.github} description={data.Weather.description} images={["/Weather/image-1.png", "/Weather/image-2.png"]} />
         <Project title={data.Sorting.name} url={data.Sorting.github} description={data.Sorting.description} />
+        </div>
       </div>
     );
   }
