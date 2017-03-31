@@ -5,7 +5,7 @@ import './App.css';
 class Home extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App homePage">
       <Header />
         <img src={require("./images/me.jpg")} alt="Sarah" className="photo" />
         <h1 className="intro-header">Hello</h1>

@@ -33,7 +33,7 @@ class Header extends Component {
           {this.displayContact()}
         </div>
         <svg className="svgLine">
-          <line x1={1} y1={1} x2={1000} y2={1} className="line" />
+          <line x1={1} y1={1} x2={5000} y2={1} className="line" />
         </svg>
       </div>
     );
