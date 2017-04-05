@@ -203,6 +203,25 @@ a:hover {
   justify-content: space-between;
 }
 
+.svgCircle {
+  fill: white;
+  margin-left: 10px;
+  margin-left: 10px;
+  color: #999;
+}
+
+.contactCircles {
+  width: 90%;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+}
+
 @media (max-width: 500px) {
   .header-text {
     font-size: 20px;
