@@ -3,12 +3,12 @@
       "Apteligent":{  
          "name":"Apteligent App",
          "github":"https://github.com/sjscott84/apteligent-mobile-app",
-         "description":"This open source app was built for Apteligent to demonstrate how their public api could be utilized.  It was built using React Native, which is written using JavaScript and JSX and then compiled into Objective-C or Java and run as a native application.  One of the major challenges I encountered in building this application was building the graphs, as I was unable to find a suitable graphing library that integrated with React Native, so I had to build my own.  Luckily, the rest of the development process went smoothly. Unfortunately, this app was never released, as not long after development the api was shut down.  However a video of the app in use can be found here."
+         "description":"This open source app was built for Apteligent to demonstrate how their public api could be utilized.  It was built using React Native, which is written using JavaScript and JSX and then compiled into Objective-C or Java and run as a native application.  One of the major challenges I encountered in building this application was building the graphs, as I was unable to find a suitable graphing library that integrated with React Native, so I had to build my own.  Luckily, the rest of the development process went smoothly. Unfortunately, this app was never released, as not long after development the api was shut down."
       },
        "Trip":{  
          "name":"Tripommendation App",
          "github":"https://github.com/sjscott84/Map-Notes-App",
-         "description":"This app is a personal project that is still in development, the basic concept is that it is a place to save all travel recommendations in one place, in groups and with notes, in one place while still utilizing the power of google maps.  It is a hybrid app that is being built using the Ionic v1 framework for the app and Google Firebase for the user authentication and database.  One of the major challenges has been integrating Ionic and Google Maps in a UI that feels modern, this is something I am still working on.  As this app is still in development it has not been released but a video of the app in use can be found here."
+         "description":"This app is a personal project that is still in development, the basic concept is that it is a place to save all travel recommendations in one place, in groups and with notes, in one place while still utilizing the power of google maps.  It is a hybrid app that is being built using the Ionic v1 framework for the app and Google Firebase for the user authentication and database.  One of the major challenges has been integrating Ionic and Google Maps in a UI that feels modern, this is something I am still working on.  As this app is still in development it has not been released but a demo video can be seen from the link above."
       },
       "Sorting":{
         "name": "Sorting Algorithms",
@@ -20,16 +20,21 @@
         "github": "https://github.com/sjscott84/WeatherDemo",
         "description": "This very simple app was built for a Brown Bag showcasing React Native that I presented.  It was built to show how easy and how fast puttting together a native application is using React Native, and how smooth the reload and debugging tools are."
       },
+      "Algorithms":{
+        "name": "Sorting Algorithms",
+        "github": "https://github.com/sjscott84/sorting-algorithms-with-tests",
+        "description": "This is a simple program I wrote in Java to practice some of the sorting algorithms I was learning in Algorithms Unlocked.  I also used this project as an opportunity to get more practice writing tests and to play around with the Java Scene Builder."
+        },
       "textEditor": {
         "name": "Data Structures and Performance Course Project / Text Editor",
-        "github":"",
+        "github":"https://github.com/sjscott84/Java-Data-Structures",
         "description": "This is a description"
       },
       "routeFinder": {
         "name": "Advanced Data Structures Course Project / Route Finder",
-        "github": " ",
+        "github": "https://github.com/sjscott84/Java-Advanced-Data-Structures",
         "description": "This is a description"
       }
    },
-   "about": "This is a blurb about me, blah blah blah, what would you like to know?  Hmmmmmmmmmmmmmmm? Pervert.  I don't know what to write here!"
+   "about": "Hi, thanks for visiting my page! My name is Sarah and I am a former Project Manager and a current wannabe Programmer.  I discovered programming thanks to Visual Basics for Applications, and haven’t looked back since.  I have spent the last 18 months retraining myself by doing online courses, self study and working on applications both for myself and for others.  I now know JavaScript (and some of its many libraries and frameworks), Java and Python.  I find myself becoming more and more fascinated with Computer Science the more I learn and regularly study algorithms, mathematics, data structures and design patterns.  I have even started getting interested in Machine Learning. Not bad for an arts major huh?"
 }

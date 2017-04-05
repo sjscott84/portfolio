@@ -6,7 +6,7 @@ import './App.css';
 class About extends Component {
   render() {
     return (
-      <div className="App fullPage">
+      <div className="App fullScreen">
         <Header />
         <div className="allProjects">
           <div className="project">
@@ -14,11 +14,15 @@ class About extends Component {
           </div>
           <div className="project">
             <h1>Training</h1>
-            <Training where="Udacity" course="Front-End Web Developer Nanodegree" />
-            <Training where="Coursera" course="Object Orientated Programming in Java" />
-            <Training where="Coursera" course="Data Structures and Performance" />
-            <Training where="Coursera" course="Advanced Data Structures in Java" />
-            <Training where="Coursera" course="Machine Learning Foundations" />
+            <Training where="Udacity" course="Front-End Web Developer Nanodegree" url="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001" />
+            <Training where="Coursera" course="Object Orientated Programming in Java" url="https://www.coursera.org/learn/object-oriented-java" />
+            <Training where="Coursera" course="Data Structures and Performance" url="https://www.coursera.org/learn/data-structures-optimizing-performance"/>
+            <Training where="Coursera" course="Advanced Data Structures in Java" url="https://www.coursera.org/learn/advanced-data-structures" />
+            <Training where="Coursera" course="Machine Learning Foundations" url="https://www.coursera.org/learn/ml-foundations" />
+            <div className="training">
+              <p>Code School</p>
+              <p>Various courses, see report card <a href="https://www.codeschool.com/users/sjscott84" target="_blank">here</a></p>
+            </div>
           </div>
         </div>
       </div>
@@ -31,7 +35,7 @@ class Training extends Component {
     return (
       <div className="training">
         <p>{this.props.where}</p>
-        <p>{this.props.course}</p>
+        <a href={this.props.url} target="_blank">{this.props.course}</a>
       </div>
     )
   }

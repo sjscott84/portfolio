@@ -4,11 +4,11 @@
   flex-direction: column;
   background: #F5F5F5;
   margin: 20px;
-  min-height: 100%;
 }
 
 .homePage {
   align-items: center;
+  height: 100vh;
 }
 
 .header {
@@ -71,6 +71,9 @@
 a {
   color: inherit;
   text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 5px;
+
 }
 
 a:visited {
@@ -92,8 +95,14 @@ a:hover {
   justify-content: flex-start;
 }
 
+.fullScreen {
+  height: 100vh;
+}
+
 .project {
   margin: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .project h1 {
@@ -182,10 +191,6 @@ a:hover {
   align-self: center;
   font-size: 30px;
   color: #d3d3d3;
-}
-
-.fullPage {
-  height: 100%;
 }
 
 .aboutMeText {

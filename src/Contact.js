@@ -5,7 +5,7 @@ import './App.css';
 class Contact extends Component {
   render() {
     return (
-      <div className="App fullPage">
+      <div className="App fullScreen">
         <Header />
       </div>
     );
