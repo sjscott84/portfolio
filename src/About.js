@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import Header from './Header.js';
 import projectData from './data.json';
+import MediaQuery from 'react-responsive';
 import './App.css';
 
 class About extends Component {
   render() {
     return (
-      <div className="App fullScreen">
+      <div className="App">
         <Header />
         <div className="allProjects">
           <div className="project">
@@ -19,9 +20,19 @@ class About extends Component {
             <Training where="Coursera" course="Data Structures and Performance" url="https://www.coursera.org/learn/data-structures-optimizing-performance"/>
             <Training where="Coursera" course="Advanced Data Structures in Java" url="https://www.coursera.org/learn/advanced-data-structures" />
             <Training where="Coursera" course="Machine Learning Foundations" url="https://www.coursera.org/learn/ml-foundations" />
-            <div className="training">
-              <p>Code School</p>
-              <p>Various courses, see report card <a href="https://www.codeschool.com/users/sjscott84" target="_blank">here</a></p>
+            <div>
+              <MediaQuery minWidth={500}>
+                <div className="training">
+                  <p>Code School</p>
+                  <p>Various courses, see report card <a href="https://www.codeschool.com/users/sjscott84" target="_blank">here</a></p>
+                </div>
+              </MediaQuery>
+              <MediaQuery maxWidth={500}>
+                <div className="trainingSmall">
+                  <p>Code School</p>
+                  <p>Various courses, see report card <a href="https://www.codeschool.com/users/sjscott84" target="_blank">here</a></p>
+                </div>
+              </MediaQuery>
             </div>
           </div>
         </div>
@@ -33,9 +44,19 @@ class About extends Component {
 class Training extends Component {
   render() {
     return (
-      <div className="training">
-        <p>{this.props.where}</p>
-        <a href={this.props.url} target="_blank">{this.props.course}</a>
+      <div>
+        <MediaQuery minWidth={500}>
+          <div className="training">
+            <p>{this.props.where}</p>
+            <a href={this.props.url} target="_blank">{this.props.course}</a>
+          </div>
+        </MediaQuery>
+        <MediaQuery maxWidth={500}>
+          <div className="trainingSmall">
+            <p>{this.props.where}</p>
+            <a href={this.props.url} target="_blank">{this.props.course}</a>
+          </div>
+        </MediaQuery>
       </div>
     )
   }
