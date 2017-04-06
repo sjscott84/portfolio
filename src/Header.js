@@ -4,21 +4,21 @@ import './App.css';
 
 class Header extends Component {
   displayProject(){
-    if(location.pathname !== "/projects"){
+    if(location.hash !== "#/projects"){
       return <p className="header-text"><Link to="/projects">Projects</Link></p>
     }else{
       return <p className="header-text"><Link to="/">Home</Link></p>
     }
   };
   displayAbout(){
-    if(location.pathname !== "/about"){
+    if(location.hash !== "#/about"){
       return <p className="header-text"><Link to="/about">About Me</Link></p>
     }else{
       return <p className="header-text"><Link to="/">Home</Link></p>
     }
   };
   displayContact(){
-    if(location.pathname !== "/contact"){
+    if(location.hash !== "#/contact"){
       return <p className="header-text"><Link to="/contact">Contact</Link></p>
     }else{
       return <p className="header-text"><Link to="/">Home</Link></p>
