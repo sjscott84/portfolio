@@ -9,12 +9,13 @@ class About extends Component {
     return (
       <div className="App">
         <Header />
-        <div className="allProjects">
+        <div className="allProjects fullScreen">
           <div className="project">
             <p>{projectData.about}</p>
           </div>
           <div className="project">
             <h1>Training</h1>
+            <Training where="Udacity" course="Full Stack Web Developer Nanodegree (ongoing)" url="https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004" />
             <Training where="Udacity" course="Front-End Web Developer Nanodegree" url="https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001" />
             <Training where="Coursera" course="Object Orientated Programming in Java" url="https://www.coursera.org/learn/object-oriented-java" />
             <Training where="Coursera" course="Data Structures and Performance" url="https://www.coursera.org/learn/data-structures-optimizing-performance"/>

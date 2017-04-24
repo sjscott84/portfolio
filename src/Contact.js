@@ -29,7 +29,7 @@ class Contact extends Component {
   }
 
   linkedin(){
-    console.log('LinkedIn')
+    window.open('https://www.linkedin.com/in/sarah-scott-507328138/');
   }
 
   render() {
@@ -41,7 +41,7 @@ class Contact extends Component {
               <ContactType what={this.state.phone} onclick={this.phone} />
               <ContactType what={this.state.email} onclick={this.email} />
               <ContactType what={"Github"} onclick={this.github} />
-              {/*<ContactType what={"LinkedIn"} onclick={this.linkedin} />*/}
+              <ContactType what={"LinkedIn"} onclick={this.linkedin} />
             </div>
           </MediaQuery>
           <MediaQuery maxWidth={500}>
