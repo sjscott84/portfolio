@@ -3,7 +3,7 @@
       "Apteligent":{  
          "name":"Apteligent App",
          "github":"https://github.com/sjscott84/apteligent-mobile-app",
-         "description":"This open source app was built for Apteligent to demonstrate how their public api could be utilized.  It was built using React Native, which lets you build a real mobile app that's indistinguishable from an app built using Objective-C or Java. React Native uses the same fundamental UI building blocks as regular iOS and Android apps. You just put those building blocks together using JavaScript and React.  One of the major challenges I encountered in building this application was building the graphs, as I was unable to find a suitable graphing library that integrated with React Native, so I had to build my own.  Luckily, the rest of the development process went smoothly. Unfortunately, this app was never released, as not long after development the api was shut down."
+         "description":"This open source app was built for Apteligent to demonstrate how their public api could be utilized.  It was built using React Native, which lets you build a real mobile app that's indistinguishable from an app built using Objective-C or Java. React Native uses the same fundamental UI building blocks as regular iOS and Android apps. You just put those building blocks together using JavaScript and React.  One of the major challenges I encountered in building this application was building the graphs, as I was unable to find a suitable graphing library that integrated with React Native, so I had to build my own.  Luckily, the rest of the development process went smoothly. Unfortunately, this app is yet to be released."
       },
        "Trip":{  
          "name":"Tripommendation App",
