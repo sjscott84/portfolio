@@ -39,6 +39,11 @@
         "name": "Art Catalog",
         "github": "https://github.com/sjscott84/catalog",
         "description": "This is a website I built as part of the Udacity Full Stack Nanodegree program, an online training program which aims to prepare students for a job as a Full Stack Web Developer. The back-end was written in Python, using the Flask framework and the front-end was built using Bootstrap.  It uses PostgreSQL for persistent data storage and the Google API for OAuth 2.0 user authentication.  It is a simple application that allows a logged in user to add an artist to a database, and then add works of art associated with that artist.  Only the user who created entries can edit or delete them.  The application was then deployed to a virtual Ubuntu Linux server, running on Amazon Lighsail, the server was secured using SSH on a non standard port, all other ports were blocked and users could only log in with RSA keys."
+      },
+      "Neighborhood": {
+        "name": "Neighborhood Map",
+        "github": "https://github.com/sjscott84/frontend-nanodegree-neighborhood-map",
+        "description": "This is a website I built as part of the Udacity Front-End Nanodegree program, and online training program which aims to prepare students for a job as a Front-End Web Developer.  This is a single page application that utilizes the Google Maps API, Yelp API and WeatherUnderground API to display a map and various activities available within walking distance of a central point.  This was built over a year ago but more details can be found on the ReadMe at the Github repository."
       }
    },
    "about": "Hi, thanks for visiting my page! My name is Sarah and I am a former Project Manager and a current wannabe Programmer.  I discovered programming thanks to Visual Basics for Applications, and haven’t looked back since.  I have spent the last 18 months retraining myself by doing online courses, self study and working on applications both for myself and for others.  I now know JavaScript (and some of its many libraries and frameworks), Java and Python.  I find myself becoming more and more fascinated with Computer Science the more I learn and regularly study algorithms, mathematics, data structures and design patterns.  I have even started getting interested in Machine Learning. Not bad for an arts major huh?"

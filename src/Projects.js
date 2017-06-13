@@ -17,6 +17,7 @@ class Projects extends Component {
           <Project title={data.Catalog.name} what={'notApp'} url={data.Catalog.github} description={data.Catalog.description} images={["/Catalog/image-1.png", "/Catalog/image-2.png", "/Catalog/image-3.png", "/Catalog/image-4.png"]} />
           <Project title={data.Weather.name} what={'app'} url={data.Weather.github} description={data.Weather.description} images={["/Weather/image-1.png", "/Weather/image-2.png"]} />
           <Project title={data.Algorithms.name} what={'notApp'} url={data.Algorithms.github} description={data.Algorithms.description} images={["/Algorithms/image-1.png", "/Algorithms/image-2.png", "/Algorithms/image-3.png", "/Algorithms/image-4.png", "/Algorithms/image-5.png",]} />
+          <Project title={data.Neighborhood.name} what={'notApp'} url={data.Neighborhood.github} description={data.Neighborhood.description} images={["/Neighborhood/image-1.png", "/Neighborhood/image-2.png", "/Neighborhood/image-3.png", "/Neighborhood/image-4.png", "/Neighborhood/image-5.png"]} />
           {/*<Project title={data.textEditor.name} what={'notApp'} url={data.textEditor.github} description={data.textEditor.description} images={["/TextEditor/image-1.png", "/TextEditor/image-2.png", "/TextEditor/image-3.png"]} />
           <Project title={data.routeFinder.name} what={'notApp'} url={data.routeFinder.github} description={data.routeFinder.description} images={["/RouteFinder/image-1.png", "/RouteFinder/image-2.png", "/RouteFinder/image-3.png"]} />*/}
         </div>
