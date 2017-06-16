@@ -36,7 +36,7 @@ class Contact extends Component {
     return (
       <div className="App">
         <Header />
-          <MediaQuery minWidth={500}>
+          <MediaQuery minDeviceWidth={800}>
             <div className="contactCircles">
               <ContactType what={this.state.phone} onclick={this.phone} />
               <ContactType what={this.state.email} onclick={this.email} />
@@ -44,7 +44,8 @@ class Contact extends Component {
               <ContactType what={"LinkedIn"} onclick={this.linkedin} />
             </div>
           </MediaQuery>
-          <MediaQuery maxWidth={500}>
+          <MediaQuery maxDeviceWidth={800}>
+            <p></p>
             <div className="contactCirclesSmall">
               <ContactType what={this.state.phone} onclick={this.phone} />
               <ContactType what={this.state.email} onclick={this.email} />
