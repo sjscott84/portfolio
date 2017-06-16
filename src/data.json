@@ -18,7 +18,7 @@
       "Weather":{
         "name": "Weather App",
         "github": "https://github.com/sjscott84/WeatherDemo",
-        "description": "This very simple app was built for a Brown Bag showcasing React Native that I presented.  It was built to show how easy and how fast puttting together a native application is using React Native, and how smooth the reload and debugging tools are."
+        "description": "This very simple app was built for a Brown Bag showcasing React Native that I presented.  It was built to show how easy and how fast putting together a native application is using React Native, and how smooth the reload and debugging tools are."
       },
       "Algorithms":{
         "name": "Sorting Algorithms",
@@ -43,8 +43,8 @@
       "Neighborhood": {
         "name": "Neighborhood Map",
         "github": "https://github.com/sjscott84/frontend-nanodegree-neighborhood-map",
-        "description": "This is a website I built as part of the Udacity Front-End Nanodegree program, and online training program which aims to prepare students for a job as a Front-End Web Developer.  This is a single page application that utilizes the Google Maps API, Yelp API and WeatherUnderground API to display a map and various activities available within walking distance of a central point.  This was built over a year ago but more details can be found on the ReadMe at the Github repository."
+        "description": "This is a website I built as part of the Udacity Front-End Nanodegree program, an online training program which aims to prepare students for a job as a Front-End Web Developer.  This is a single page application that utilizes the Google Maps API, Yelp API and WeatherUnderground API to display a map and various activities available within walking distance of a central point.  This was built over a year ago but more details can be found on the ReadMe at the Github repository."
       }
    },
-   "about": "Hi, thanks for visiting my page! My name is Sarah and I am a former Project Manager and a current wannabe Programmer.  I discovered programming thanks to Visual Basics for Applications, and haven’t looked back since.  I have spent the last 18 months retraining myself by doing online courses, self study and working on applications both for myself and for others.  I now know JavaScript (and some of its many libraries and frameworks), Java and Python.  I find myself becoming more and more fascinated with Computer Science the more I learn and regularly study algorithms, mathematics, data structures and design patterns.  I have even started getting interested in Machine Learning. Not bad for an arts major huh?"
+   "about": "Hi! My name is Sarah and I am a former Project Manager and a current wannabe Programmer.  I discovered programming thanks to Visual Basics for Applications, and haven’t looked back since.  I have spent the last 18 months retraining myself by doing online courses, self study and working on applications both for myself and for others.  I now know JavaScript (and some of its many libraries and frameworks), Java and Python.  I find myself becoming more and more fascinated with Computer Science the more I learn and regularly study algorithms, mathematics, data structures and design patterns.  I have even started getting interested in Machine Learning. Not bad for an arts major huh?"
 }
