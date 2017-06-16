@@ -9,7 +9,7 @@ class About extends Component {
     return (
       <div className="App">
         <Header />
-        <div className="allProjects fullScreen">
+        <div className="allProjects">
           <div className="project">
             <p>{projectData.about}</p>
           </div>
