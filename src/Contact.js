@@ -17,7 +17,7 @@ class Contact extends Component {
   }
 
   phone(){
-    this.setState({phone: "+1 925 913 0791"})
+    this.setState({phone: "027 575 1705"})
   }
 
   email(){
